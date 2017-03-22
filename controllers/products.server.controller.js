@@ -24,6 +24,12 @@ exports.new = function(req, res) {
 		request: req
 	});
 };
+exports.all = function(req, res) {
+	res.render('./../public/views/product/list.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
 
 module.exports.create = function(req, res) {
   var product = new Product(req.body);
